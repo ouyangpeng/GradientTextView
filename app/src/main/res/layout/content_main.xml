@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/left_to_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试 LEFT_TO_RIGHT" />
+
+    <Button
+        android:id="@+id/left_to_right_form_none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/left_to_right"
+        android:text="测试 LEFT_TO_RIGHT_FORM_NONE" />
+
+    <Button
+        android:id="@+id/right_to_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/left_to_right_form_none"
+        android:text="测试 RIGHT_TO_LEFT" />
+
+    <Button
+        android:id="@+id/right_to_left_from_none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/right_to_left"
+        android:text="测试 RIGHT_TO_LEFT_FROM_NONE" />
+
+    <Button
+        android:id="@+id/inner_to_outer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/right_to_left_from_none"
+        android:text="测试 INNER_TO_OUTER" />
+
+    <Button
+        android:id="@+id/custom_gradient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inner_to_outer"
+        android:text="测试 自定义动画" />
+
+    <Button
+        android:id="@+id/static_init_gradient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/custom_gradient"
+        android:text="测试 静态展示" />
+
+    <com.gradient.view.GradientTextView
+        android:id="@+id/gradientTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/static_init_gradient"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:text="测试GradientTextView效果"
+        android:textSize="18sp"
+        app:change_color="@color/colorAccent"
+        app:original_color="@color/colorPrimary" />
+
+    <com.gradient.view.GradientTextView
+        android:id="@+id/note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="自定义颜色逐渐改变的TextView，【欧阳鹏】"
+        android:textSize="15sp"
+        app:change_color="@color/colorAccent"
+        app:original_color="@color/colorPrimary" />
+</RelativeLayout>
